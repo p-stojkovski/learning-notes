@@ -11,7 +11,9 @@ Participate in all phases of cloud development to create end-to-end solutions. D
 - Common business issues
 - Design-first technologies
 
-## Common business issues
+## Choose the best Azure service to automate your business processes 
+
+### Common business issues
 
 Business processes modeled in software are often called workflows. Azure includes four different technologies that you can use to build and implement workflows that integrate multiple systems:
 
@@ -63,3 +65,55 @@ So, here's the deal: Azure Functions let you write little bits of code that do s
 Now, what can these functions do? Well, pretty much anything you want! You can use them to process data, respond to events, or even build entire applications.
 
 Here's an example: Let's say you have a website, and you want to send a welcome email to every new user who signs up. You can create an Azure Function that listens for new sign-ups (that's the trigger), and when someone signs up, the function automatically sends them a welcome email.
+
+### Analyze the decision criteria
+
+There are several different business processes that run your bicycle rental business. For example, there's the bike rental process, a return process, a bike booking process, and processes that don't directly relate to bikes, such as holiday booking for the staff.
+
+How to choose a service?
+
+The first question to ask is whether you prefer to design the workflow in a GUI designer tool or by writing code. Valid reasons for using a design-first tool include:
+
+- People who design the workflow have no coding experience.
+- Later designers and users can consult the graphical design to clearly understand how the workflow proceeds.
+
+Alternatively, you can choose to use a code-first tool because:
+
+- People who design the workflow are developers and prefer to work entirely in code.
+- You want the details of a workflow to be hidden from non-coders.
+
+### Choose a design-first technology
+
+If you want to plan how work gets done, you can choose between Microsoft Power Automate and Azure Logic Apps.
+
+With Azure Logic Apps, you draw out the plan visually and can also edit the code if you're into coding.
+
+With Microsoft Power Automate, you get lots of ready-made plans, but you can't change the code. It's more for people who don't know how to code but understand the work process.
+
+### Choose a code-first technology
+
+If you prefer coding to plan how work gets done, you can choose between WebJobs and Azure Functions.
+
+Azure Functions is usually the better choice because it offers more features, like different ways to start tasks, supports more programming languages, allows testing code online, and charges based on how much you use it.
+
+However, there are times when WebJobs might be a better fit:
+
+1. If you already have an app on Azure App Service and want to add the workflow directly into it.
+2. If you need to customize the JobHost in ways that Azure Functions doesn't support.
+3. If you want more control over how your app handles retrying tasks.
+
+### Mixing technologies
+
+Imagine you have a business process where you need to process customer orders.
+
+You start by creating a workflow in Microsoft Power Automate to receive and validate the order details submitted by customers through a form on your website. Once the order is validated, you want to trigger a series of actions, like updating your inventory database and sending a confirmation email to the customer.
+
+Here's where mixing technologies comes in handy:
+
+1. Receive and Validate Order (Microsoft Power Automate): You design a flow in Microsoft Power Automate to receive the order details and validate them. For example, checking if all required fields are filled and if the items are in stock.
+
+2. Inventory Update (Azure Function): After the order is validated, you use an Azure Function to update your inventory database automatically. This function is triggered by the successful validation of the order from the Power Automate flow.
+
+3. Send Confirmation Email (Azure Logic App): Finally, you set up a Logic App in Azure to send a confirmation email to the customer. This Logic App is triggered by the successful completion of the inventory update function.
+
+By using a mix of Microsoft Power Automate, Azure Functions, and Azure Logic Apps, you've created a seamless process where each technology handles a specific part of the workflow. This not only allows for better control and customization but also enables you to leverage the strengths of each tool for different tasks within the overall process.
