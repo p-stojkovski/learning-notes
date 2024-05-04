@@ -117,3 +117,29 @@ Here's where mixing technologies comes in handy:
 3. Send Confirmation Email (Azure Logic App): Finally, you set up a Logic App in Azure to send a confirmation email to the customer. This Logic App is triggered by the successful completion of the inventory update function.
 
 By using a mix of Microsoft Power Automate, Azure Functions, and Azure Logic Apps, you've created a seamless process where each technology handles a specific part of the workflow. This not only allows for better control and customization but also enables you to leverage the strengths of each tool for different tasks within the overall process.
+
+### Choose the best design-first technology to automate your business process
+#### Scenario: https://learn.microsoft.com/en-us/training/modules/choose-azure-service-to-integrate-and-automate-business-processes/4-logic-apps-and-flow
+
+### When to choose Azure Functions to run your business logic
+#### Scenario: https://learn.microsoft.com/en-us/training/modules/choose-azure-service-to-integrate-and-automate-business-processes/5-web-jobs-and-functions
+
+### Use cases
+
+#### Design-First Approach:
+
+1. Expense Approval Workflow:
+    - Scenario: Employees submit expense reports for approval.
+    - Use Case: Design the workflow visually in Microsoft Power Automate, where users can submit expense reports through a form, managers receive notifications to review and approve/reject, and finance teams get notified for payment processing.
+2. Customer Support Ticketing System:
+    - Scenario: Handling customer support tickets efficiently.
+    - Use Case: Use Azure Logic Apps to design a workflow where incoming support emails are automatically converted into tickets, assigned to the right department based on keywords, and tracked until resolution, all without writing code.
+
+#### Code-First Approach:
+
+1. Real-Time Data Processing:
+    - Scenario: Processing real-time data from IoT devices.
+    - Use Case: Develop an Azure Function to process incoming sensor data, perform complex calculations or analytics, and store results in a database. This approach allows for fine-grained control over data processing logic and scalability.
+2. E-Commerce Order Fulfillment:
+    - Scenario: Fulfilling orders from an online store.
+    - Use Case: Create a WebJob to handle order fulfillment tasks such as inventory management, order processing, and shipment tracking. This code-first approach enables customization of business logic and integration with existing systems like ERP or warehouse management.
