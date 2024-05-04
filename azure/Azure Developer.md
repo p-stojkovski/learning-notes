@@ -6,16 +6,10 @@ CLOUD SKILLS CHALLENGE
 Azure Developer
 Participate in all phases of cloud development to create end-to-end solutions. Design, build, test, and maintain cloud applications using compute, storage, management, and security services on Azure. In under 30 hours, you'll learn about storing data in Azure, creating serverless applications, connecting your services together, and more.
 
-
-
-
 ## Roadmap
 
 - Common business issues
 - Design-first technologies
-
-
-## Notes
 
 ## Common business issues
 
@@ -59,3 +53,13 @@ There are two kinds of WebJob:
 Here's how it works: You create a WebJob by giving your digital assistant a set of instructions. These instructions can be simple, like "run this program every day at 8 AM," or more complex, like "process these files as soon as they're uploaded."
 
 Once you've set up your WebJob, it sits quietly in the background, waiting for its turn to do its job. And when the time comes or when a trigger occurs, like a new file being uploaded, your digital assistant springs into action and gets the job done, just like you asked.
+
+### Azure Functions
+
+An Azure Function is a simple way for you to run small pieces of code in the cloud, without having to worry about the infrastructure required to host that code.
+
+So, here's the deal: Azure Functions let you write little bits of code that do specific things. These bits of code are called functions. And just like saying a word triggers a spell, something called a "trigger" makes an Azure Function run.
+
+Now, what can these functions do? Well, pretty much anything you want! You can use them to process data, respond to events, or even build entire applications.
+
+Here's an example: Let's say you have a website, and you want to send a welcome email to every new user who signs up. You can create an Azure Function that listens for new sign-ups (that's the trigger), and when someone signs up, the function automatically sends them a welcome email.
