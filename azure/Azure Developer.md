@@ -9,3 +9,4 @@ Participate in all phases of cloud development to create end-to-end solutions. D
 ## Roadmap
 
 - Choose the best Azure service to automate your business processes
+- Create serverless logic with Azure Functions
