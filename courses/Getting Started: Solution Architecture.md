@@ -104,4 +104,29 @@ All takes down to Trade offs. If you need high avaiablity and reliability, optim
 It depends on which non-functional requirements.
 Keep evolability on top of your mind!
   
+### Architect in characteristics
+Think in characteristics, patterns for different situations!
+
+### Modularity, Coupling and Cohesion
+Modularity is dividing your system into separate modules that can be developed independently. Make system easy to understand, develop and mantain. Changes in one module should not direct impact another module.
+
+Coupling, the degree of interdependence between different modules. 
+- Target loose coupling. Runtime coupling, when one system needs to know the location of another, exaple http requests.
+- Temporal coupling when two or two modules depend of timing or order of events.
+- Content coupilng, when one module can modify the data of another directly, like shared database (avoid).
+- Functional coupling, when 2 or more modules depend on eachother functionalities
+- Sequential coupling, the output of one module feed directly into another.
+
+Target: reduce coupling as much as possible.
+
+Cohesion, the degree to which the elements inside a module belong together. 
+- Things that change together, live together.
+- Keep focus on one job
+- Apply single responsibility
+- Interact with other modules in loosly coupled way
+- Clear focused modules with defined purpose
+- A Structure is stable if cohesion if high and coupling is low!
+
+Target: high cohesion.
+
 
