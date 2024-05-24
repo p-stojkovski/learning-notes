@@ -34,3 +34,12 @@ Very important conversation flow when talking to bussiness person and gathering 
 7. What is expected load?
 8. Are there any plans for that load to grow?
 9. Any other integration (sytems) required?
+
+### Optimizing for Change
+Change can be unsettling, but it's also a sign of growth. Only trought change you can improve and adapt to new challenges and opportunities.
+Embrace change as constant force in life and use it to get you forward for grater success.
+
+As a software architect when design a system is very important to consider that the system will evolve and adapt to changing conditions.
+
+You want your system to grow and change as the organisation grows.
+
