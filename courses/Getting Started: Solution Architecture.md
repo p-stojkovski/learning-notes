@@ -19,3 +19,18 @@ But, if you spent too much time on the ground, you can lose that perspective of 
 Solution: **The Software Architects Elevator**
 
 Must understand the problem that system is solving.
+
+### The importance of the bussiness context
+
+It's very important to understand the bussiness context and translate to technical desing.
+
+Very important conversation flow when talking to bussiness person and gathering information:
+1. What is the primary purpose of the system?
+2. Dive deeper into the business context, the use case!
+3. More business ontext... It's important!
+4. Clarify understanding!
+5. How critical is the component? What happens if it isn't working?
+6. How does the component fit into the wider business landscape?
+7. What is expected load?
+8. Are there any plans for that load to grow?
+9. Any other integration (sytems) required?
