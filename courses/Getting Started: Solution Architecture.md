@@ -63,3 +63,45 @@ Important ability as an architect, verbal, written, be confident to express your
 Functional: Describe the specific features and capabilites that software needs to posses to fulfill users needs. (Cover the actual things that the end users of the system needs to acheve)
 
 Non-functional: Speed, performance, scalability, security, useablity, relibility, availability, durability, latency. (Common accross all organisations, play a crucial role, grather impact than functional)
+
+### Gathering Functional Requirements
+You're builing something that meets user needs.
+
+Non-functional questions tips:
+- What are the performance requirements?
+- What are the security or governance requirements?
+- How critical is the system, how available should it be?
+- How much impact would it have if this component was offline for 1, 2, 6, 24 hours?
+- What are the peak times?
+
+If you don't have any non-functional requirments, that's an architectual smell.
+
+### Architectural -ilities and understanding trade offs
+-ilities are critical considiration on software engineerting, use to measure the overall effectivness of your system. (performance, reliability, maintanibiliy, scalability, usability)
+
+- Performance:
+  - How quickly must your system respond?
+  - Is it a background system processing batches, how quickly need to process?
+  - How does the performance need to change based on the load the system is under?
+- Scalability:
+  - How scaleable your system needs to be?
+  - What is the steady user load, what is the peak user load?
+  - Is the traffic predictable?
+  - What dimensions you have available to scale, horizontaly and verticaly?
+- Availability & Reliability
+  - How long the system to run without faliure?
+  - How long it take the system to recover?
+  - Mean time before failure?
+  - Can downtime be scheduled?
+- Security
+- Evolvability
+- Maintanibiliy
+- Flexibility
+- Usability (build MVP)
+- How easy is your sytem to integrate with? (is it sync, async, cosistency between components?)
+
+All takes down to Trade offs. If you need high avaiablity and reliability, optimizing for cost can be difficult. If you need high security, your performance can be hit.
+It depends on which non-functional requirements.
+Keep evolability on top of your mind!
+  
+
