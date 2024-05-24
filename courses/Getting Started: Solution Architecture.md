@@ -134,4 +134,9 @@ Cohesion, the degree to which the elements inside a module belong together.
 
 Target: high cohesion.
 
+### Customers & their Access Patterns
+When designing a system is crucial to consider the end users, not only meets the intent of the end users, but also be efficent and effective, meeting the goals of your organisation. 
 
+You are building software for people.
+
+Build things right for your organisation, based on your charactericts and business requirements keeping your end users in mind!
