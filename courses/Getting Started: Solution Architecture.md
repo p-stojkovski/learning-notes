@@ -61,4 +61,5 @@ Important ability as an architect, verbal, written, be confident to express your
 
 ### Functional vs non-functional requirements
 Functional: Describe the specific features and capabilites that software needs to posses to fulfill users needs. (Cover the actual things that the end users of the system needs to acheve)
+
 Non-functional: Speed, performance, scalability, security, useablity, relibility, availability, durability, latency. (Common accross all organisations, play a crucial role, grather impact than functional)
