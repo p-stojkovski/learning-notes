@@ -107,6 +107,11 @@ Keep evolability on top of your mind!
 ### Architect in characteristics
 Think in characteristics, patterns for different situations!
 
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/4e431ad8-9716-4893-973c-e136d58a4d22)
+
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/8b8831b6-9a71-4459-9f09-6eb56d94e64a)
+
+
 ### Modularity, Coupling and Cohesion
 Modularity is dividing your system into separate modules that can be developed independently. Make system easy to understand, develop and mantain. Changes in one module should not direct impact another module.
 
