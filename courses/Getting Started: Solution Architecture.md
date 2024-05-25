@@ -242,3 +242,10 @@ Why not?
 - When not having clear domain.
 - Builing startup.
 - Don't have a good reason.
+
+### Adopting Microservices
+- Monolith to Microservices
+- Make sure you have buy in from all ogranisation. Demonstate the value from techical people to non techical with specific terms(bussiness, techical).
+- Embrace incremental migration.
+- Embrace event storming sessions.
+- Strangler Fig pattern
