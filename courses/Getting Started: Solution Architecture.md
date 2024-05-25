@@ -140,3 +140,27 @@ When designing a system is crucial to consider the end users, not only meets the
 You are building software for people.
 
 Build things right for your organisation, based on your charactericts and business requirements keeping your end users in mind!
+
+## Architecture Styles
+
+### Monoliths
+Type of architecture where all the functionality of the system is tightly together.
+Deployed as a single unit.
+Simple to develop.
+Fantastic when starting out.
+
+Can be challenging to scale and mantain.
+Can lead to big ball of mud. (Unregulated growth and repeated expedited repair)
+Maintaining a monoloth requires a big responsability.
+
+### Layered Architecture (N-tier)
+Breaks your system down into horizontal slices.
+Clearly separates concerns.
+Presentation layer does not need to know what DB provider is used.
+Each layer provides abstraction aroud specific task.
+Allows developers to focus on individual experties. (UI, backend, Data)
+
+**Watch out for**: Architectual sink-hole (anti-pattern), occurs when request simply passes through layers with no additional value added. If presentation layer talks to bussiness layer with nothing just passing the request to the persistence layer just to get data from db, you probably have unnecessary layers to the application, just adding unnecessary allocations, processing and could pottentialy have impact on performance.
+
+
+
