@@ -162,5 +162,37 @@ Allows developers to focus on individual experties. (UI, backend, Data)
 
 **Watch out for**: Architectual sink-hole (anti-pattern), occurs when request simply passes through layers with no additional value added. If presentation layer talks to bussiness layer with nothing just passing the request to the persistence layer just to get data from db, you probably have unnecessary layers to the application, just adding unnecessary allocations, processing and could pottentialy have impact on performance.
 
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/3a7c1ba3-5ffd-4e12-a668-7f97ca1464d7)
+
+### Hexagonal Architecture (Onion, Clean)
+Design software systems that separate core business logic from external concerns. (UI, databases, external services)
+Fits well in organisation that practices Domain Driven Design.
+Great on long term.
+Provides a clear separation of concerns and evoleability.
+The bussiness logic is the heart (central core) of the architecture.
+
+Ensure to have right organisational structure and working practices in place when starting out.
+
+Which style do I use, Layered or Clean...?
+- Let the system complexity drive the architectual style.
+- CRUD? Start with Layered Architecture.
+- Complex bussiness logic and rules, change often bussiness rules without to wory about of the implemntation details? Start with Clean Architecture.
+
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/ef6cb0a5-8fcb-429a-b183-77df74fdaddf)
+
+### Service Oriented Architecture
+Good for scaling.
+Any change on one service, the other services does not need to know about the change.
+Think if for example the services need to comunicatie between eachother, and one fails, how to you mange the failiure?
+Introduce complexity through inter-service communication
+All about flexibility and scalability, but it does need coordination for all services work together.
+
+When to use?
+- If application is large and complex
+- If different part of system have different scaling requirments
+- If you organisation is structured by features or domain, not by techical experties. (Separate team(ui, backend, data) for every service working independently on feature)
+
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/0b24644b-80b1-429a-9cad-41ac9e08cdc5)
+
 
 
