@@ -275,3 +275,9 @@ It can be used inside monolith. Different modules can communication in decoupled
 Fundanmental part is that the events itself are bussiness events! (OrderCreated, PaymentConfirmed)
 
 ### Thinking Serverless First
+- Way of thinking
+- Why am i doing this, when a cloud provider could do it for me?
+- Focus on deliver value, offloading operational responsability as much as possible.
+
+### Conway's Law and Aligning Architecture to the Organisation
+Organisations tend to create systems that mirrot their own team and communication structures.
