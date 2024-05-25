@@ -281,3 +281,50 @@ Fundanmental part is that the events itself are bussiness events! (OrderCreated,
 
 ### Conway's Law and Aligning Architecture to the Organisation
 Organisations tend to create systems that mirrot their own team and communication structures.
+
+- Align your architecture to your organisation or align your organisation to your intended architecture!
+- Structure your teams around your desired architecure style.
+- Prioritize async comminication.
+- Good software is a team sport.
+
+Teams are distinct by 4 fundamental types (Team Topologies book):
+1. Stream aligned team (delivering features like orders, dispatch, products)
+2. Enabling team (help Stream aligned team overcome obsticles ex. help them develop security, dev ops, ci/cd...)
+3. Complex sub-system team (AI, ML, team of data sciences)
+4. Platform team (build product that the stream aligned teams can consume and increase their velocity)
+
+There are 3 distinct types of communication (Team Topologies book):
+1. X as a service (one team provide something(from platform team) and another cosumes it)
+2. Fascilitating (one team helps and mentors another teams, ex. Enabling team to Stream aligned team)
+3. Collaboration (when teams work together for a fixed period of time, ex. Stream aligned team to other Stream aligned team)
+
+### Ocams Razor - Keep It Simple Stupid
+- **The simplest explanation (solution) is often the best one!**
+- Keep architecture simple as possible!
+- KISS
+
+Good architect should focus on building system that easily maintainable, flexible, scalable, user friendly. Benefits: lower costs, less maintanance, easy to understand, smooth communication.
+
+Always ask yourself if there an easy way!
+
+### Choosing the Appropriate Architecture
+- Monolith: perfect for small aplications, MVP
+- SOA: great to share functionality across multiple applications
+- Microservices: when have organisation structure that fits, great for scaling, lot of complexity
+- Event driven architecture: when need to reduce coupling with async communication betweeen components
+
+Start with monolith, when you hit a point to break, introduce microservices, be intentioal why you're choosing specific architecture!
+
+## Design Patterns
+
+### Thinking In Patterns
+Think pattern first, not specific services or implmentations.
+
+### API First Design - APPLICTATION PROGRAMMING INTERFACE - API
+- Domain model first, Api second.
+
+Thinking API first, integration first, agree on the contract and schema will allow you to keep this decoupled organisational structure, leading to decoupled software architecture.
+
+### Reccomended read:
+1. Thinking in Systems: International Bestseller
+2. Team Topologies
