@@ -194,5 +194,40 @@ When to use?
 
 ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/0b24644b-80b1-429a-9cad-41ac9e08cdc5)
 
+### The Fallacies of Distributed Computing
+What is distributed system? System located on different machines that work together as a single entity.
+Don't assume anything, design with the fallacies in mind.
 
+- The network is reliable. It can fail! Think about what are you going to do if the network fails.
+- Latenty is zero. It needs the data to travel across network. Let say you have 10 services communicate to perform a task, and there is 100ms per service latency, that's total 1sec.
+- Bandwidth is infinite. It has limits. If you have request that returns 500kb, but if that endpoint is requstes 2000 times per minute, you have 1GB transfered every single minute.
+- Network is secure. It is not always true.
 
+### Microservices
+Excellent choice when done right, and extremly easy to get very wrong!
+
+- Small self contained unit. Has one job, and does it very good.
+- Scalability, Flexibiliy and Resiliance.
+- Update and fix small part of the system without affecting the whole.
+- Each microservice is an independently deployable unit
+
+When to consider?
+- Large application with components that have different data or scaling requirments
+- Different techologies for different microservices
+
+First consider these questions?
+- What are you hoping to acheve?
+- Have you considered alternatives?
+- How will you define success?
+
+Vision about the goal, what are you aming for?  Strategy about how you are going to do it?
+
+Be comminted to the vision but very flexible with your strategy!
+
+What is the difference between service oriented architecture and microservices?
+- Both are separating in services (order, dispach, inventory)
+- SOA can have services that can be large and complex, but doing a single job, one feature logic only. Communication between services.
+- Microservices have services that can have multiple features within them.
+- SOA and Microservices use services as they builing blocks, SOA tends to have bigger multifunctional blocks, where mictoservices breaks down in small units of deployment.
+
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/03e019ad-81e3-4a21-8612-88127204f111)
