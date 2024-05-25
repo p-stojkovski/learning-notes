@@ -1,4 +1,4 @@
-## Getting Started: Solution Architecture - https://courses.dometrain.com/courses/take/getting-started-solution-architecture
+## Getting Started: Solution Architecture - Dometrain
 
 ### What is software architect?
 - The shared understaing that the expert developers have of the system design
@@ -231,3 +231,14 @@ What is the difference between service oriented architecture and microservices?
 - SOA and Microservices use services as they builing blocks, SOA tends to have bigger multifunctional blocks, where mictoservices breaks down in small units of deployment.
 
 ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/03e019ad-81e3-4a21-8612-88127204f111)
+
+### Why Choose Microservices?
+- Improve atonomy of the teams. Allowing each separate team so develop and deploy spefic part of functionality.
+- Reduce time to market. Smaller pieces of functionality are easy to be understood. tested and deployed. Allows to deliver features faster, adapt to change.
+- Increase robustness. Think deeply how to intergate services together.
+- Embrace new technologies. You can switch, change individual service technology, without affecting the other services.
+
+Why not?
+- When not having clear domain.
+- Builing startup.
+- Don't have a good reason.
