@@ -249,3 +249,29 @@ Why not?
 - Embrace incremental migration.
 - Embrace event storming sessions.
 - Strangler Fig pattern
+
+### Event Driven Architecture
+EDA is a powerful way of desinging systems that are flexible, responsive and scalable.
+
+What is an event?
+It is telling that something has happend. It's immutable, it's happended in the past and it cannot be changed!
+
+In EDA the components communicate by broadcasting events and reponding to them.
+
+We can split the event in 2 main parts:
+- Header/Metadata (contain event type, timestamp, identitfier)
+- Body/Payload (content)
+
+Allows multiple components to interact without knowing anything about eachother.
+
+Communicates between services in async way.
+
+Strategies for communication:
+- Queue
+- EventBus
+
+It can be used inside monolith. Different modules can communication in decoupled way, reducing shpagetti code and big ball of mud.
+
+Fundanmental part is that the events itself are bussiness events! (OrderCreated, PaymentConfirmed)
+
+### Thinking Serverless First
