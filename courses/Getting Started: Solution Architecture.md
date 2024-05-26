@@ -350,7 +350,8 @@ Load balancing:
 - Preventing overloading of one.
 - Improves performance and realibility.
 - Important for scalability.
-- Types of load balacing techniques:
+
+Types of load balacing techniques:
   1. Round robin: distributes requests to each server in round way.
    ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/090118ae-b85b-4db4-9511-cceadb79fd3d)
   2. Least connection: distributes requests to the server with fewest currenct connections.
@@ -362,6 +363,47 @@ Scaling:
 
 ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/ae702138-72a3-4195-bed1-444d6fe3aca6)
 
+### Caching
+Term that indicated that you store data in a temporaty location where it can be read quickly!
+
+- Easy to get started, but difficult to get right!
+- Usefull when having to read heavy workloads.
+- Tolerate stale data (data that doesn't change often)
+- Powerful tool to increase the performance and troughput of your system.
+
+There are 2 primary types of caching:
+1. Read through cache
+2. Write ahead cache
+
+- Monitor cache and latency to ensure that the cache is improving your system!
+- Calculte to ensure you have enough cache hits to offset the cache misses.
+- If tou have a lot of cache misses, you are increasing the overall latency of the system.
+- Cache hit - record is found in the cache.
+- Cache miss - cache is cheched and data isn't here
+
+Understand the latency before and after the cache and analayze how it affects the overall performance of the system!
+
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/bd2ecde1-d461-4d61-ad3e-f7873d862545)
+
+### Integration Styles
+- **File transfer**. It can be challenging, but it's simple and easy way to start!
+  ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/5cdb5191-2b16-49c9-ac05-8218f807f72d)
+  
+- **Shared database**. Monoliths typically do this as a default. It's hard to determine an appropriate schema that suits all parties.
+  ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/f4ab7d83-2adc-4f97-8aa1-606c8008a30c)
+
+- **RPC - Remote procedure call**. Often seen with service oriented architecture and microservices.
+  ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/077af571-5d13-408f-bf97-2cb72a377db2)
+
+- **Message based communication**. All integration is async.
+  ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/599f2b5c-2c93-462f-a644-f73deb912636)
+- Within messaging we have 2 different types of messaging:
+  1. Point to point message channel (A => message channel <- B), using stream or queue
+  2. Pub/Sub message channel (A -> msg bus <- B, C subscribe and receive copy of that msg)
+  ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/670fece6-823e-4156-b291-be99f54b6dcc)
+
+
 ### Reccomended read:
 1. Thinking in Systems: International Bestseller
 2. Team Topologies
+3. Enterprise integration patterns
