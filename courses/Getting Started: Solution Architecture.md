@@ -325,6 +325,25 @@ Think pattern first, not specific services or implmentations.
 
 Thinking API first, integration first, agree on the contract and schema will allow you to keep this decoupled organisational structure, leading to decoupled software architecture.
 
+### Streaming Vs Batch Processing
+Used when builing point to point integration!
+
+- Point to point is simply message driven communication between two systems.
+
+Stream:
+- Stream is a constant and continus stream of data. (Producer -> Queue -> Consumer)
+- Stream processing allows you to process data in real time.
+- Gives more real time look at the data as is coming through.
+
+Batch Processing:
+- A process that runs on a schedule. (Producer -> Queue(Channel) <- Consumer (at schedule will react out and process the data)
+
+What to pick?
+- Batch Processing: Check inventory levels and place suppliers orders.
+- Stream: Analyze orders as thay arrive to check for fraudelent transactions.
+
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/973b999e-5cfc-4f55-81aa-21909e435b37)
+
 ### Reccomended read:
 1. Thinking in Systems: International Bestseller
 2. Team Topologies
