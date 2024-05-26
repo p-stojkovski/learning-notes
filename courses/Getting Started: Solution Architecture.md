@@ -344,6 +344,24 @@ What to pick?
 
 ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/973b999e-5cfc-4f55-81aa-21909e435b37)
 
+### Scaling Systems
+Load balancing:
+- Technique for distributing incoming traffic across multiple pieces of compute.
+- Preventing overloading of one.
+- Improves performance and realibility.
+- Important for scalability.
+- Types of load balacing techniques:
+  1. Round robin: distributes requests to each server in round way.
+   ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/090118ae-b85b-4db4-9511-cceadb79fd3d)
+  2. Least connection: distributes requests to the server with fewest currenct connections.
+  3. Hashing algoritm: distributes requests based on the user itself incoming request.
+ 
+Scaling:
+- Verical: increasing the resources of a single piece of compute. Effective way to improve performance, but has limitations.
+- Horizontal: adding more instances of compute.
+
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/ae702138-72a3-4195-bed1-444d6fe3aca6)
+
 ### Reccomended read:
 1. Thinking in Systems: International Bestseller
 2. Team Topologies
