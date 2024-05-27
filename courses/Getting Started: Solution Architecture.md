@@ -424,6 +424,14 @@ Understand the latency before and after the cache and analayze how it affects th
 
 - "Its not the boxes you need to worry about on an architecture diagram, it's the lines!"
 
+### Integrating with External Systems
+- "An appropriate level of coupling depends on the level of control you have over the endpoints!"
+- Patterns of reducing coupling like async communication, but what about systems don't support async communnication, like 3rd party api you dont have control over?
+  1. Combination of batch processing and data stream.
+
+- Anti corruption layer, allows to manage things outside of your control like 3rd party services.
+- Carefully consider your integration points! Look to optimize and reduce this direct pices of coupling as much as possible.
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/909594f0-09eb-44a8-8158-0f8953295135)
 
 ### Reccomended read:
 1. Thinking in Systems: International Bestseller
