@@ -1,4 +1,4 @@
-## Getting Started: Solution Architecture - Dometrain
+![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/00b8d3ae-180a-472e-b3a2-e965998bcd16)## Getting Started: Solution Architecture - Dometrain
 
 ### What is software architect?
 - The shared understaing that the expert developers have of the system design
@@ -401,6 +401,28 @@ Understand the latency before and after the cache and analayze how it affects th
   1. Point to point message channel (A => message channel <- B), using stream or queue
   2. Pub/Sub message channel (A -> msg bus <- B, C subscribe and receive copy of that msg)
   ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/670fece6-823e-4156-b291-be99f54b6dcc)
+
+### Messaging and Reactive System Designs
+- Embracing async communication is powerfull tool when builing large scale distributed systems.
+- Lower coupling and higher cohesion
+- Reactive system design
+- Messages are stored on the channel until a point in which they are processed.
+- Without proper documentation, it is difficult to tackle issues and debug the system.
+- Async commununication can make it difficult to determine caouse and effect.
+- Challenge of consistency. How consistent is the date between components? It can take time to reach the event to the component.
+- There are two types of consistency:
+  1. Eventual consistency
+  2. Strong consistency
+- Use publish subscribe to communicate between business domains or teams!
+
+### Architect for failure
+- Architecting for failure are most important considirations you are making when builing a system.
+- When designing, constantly ask yourself what happens if X component fails. What if team pushesh a release that contains a bug, or introduce latency.
+- Strategies to mitigate potential failures:
+  1. Embrace async communication
+  2. If sync communication is needed, use retry (exponential) or backup strategy with circuit braker (inform you that external system is offline).
+
+- "Its not the boxes you need to worry about on an architecture diagram, it's the lines!"
 
 
 ### Reccomended read:
