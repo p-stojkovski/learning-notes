@@ -450,7 +450,30 @@ https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/lo
 ### Architect in patterns
 - Design patterns
 - Think of the charachteristics of your system.
-  
+
+### The importance of context
+- Context is king in documenting decisions!
+- Context provides the nesessary reference points, it gives the bigger picture how the system operates!
+- High level overview
+- Inlcuding additional context about the users who are using the system and external systems that you might need to communicatie with is benefical
+  *Add diagram!
+
+### Context mapping
+- Shows you the communication patterns between teams.
+- Context is a logical grouping around a piece of functionality!
+- Context map are useful diagrams, help to improve the understandability of the system!
+  *Add diagram!
+
+### The importance of Interoperability
+- It is all about making sure your software plays nice with other pieces of software architecture.
+- Embrace standards and protocols that are common and open.
+- Design user friendly api's, well documented and versioned
+- Consider data formats
+- Regulary test your system interactions, schemas and integrations
+
+## Architecture in practice
+
+
 ### Reccomended read:
 1. Thinking in Systems: International Bestseller
 2. Team Topologies
