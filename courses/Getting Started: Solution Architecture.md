@@ -1,4 +1,4 @@
-![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/00b8d3ae-180a-472e-b3a2-e965998bcd16)## Getting Started: Solution Architecture - Dometrain
+## Getting Started: Solution Architecture - Dometrain
 
 ### What is software architect?
 - The shared understaing that the expert developers have of the system design
@@ -433,7 +433,26 @@ Understand the latency before and after the cache and analayze how it affects th
 - Carefully consider your integration points! Look to optimize and reduce this direct pices of coupling as much as possible.
 ![image](https://github.com/p-stojkovski/learning-notes/assets/3589356/909594f0-09eb-44a8-8158-0f8953295135)
 
+### Architecting data
+- Consider data model, blueprint for the system
+- Architecting data is critical aspect of software design.
+
+## Documenting decisions
+https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/locales/en/examples/choosing-a-database-technology
+
+## Documenting use cases
+- Use cases are like scripts for the software actors(users)
+- Other systems can be users
+- Agree on the what and the why, then worry about the how.
+- Well writen use case should be like a story.
+- Keep it simple and focused on the user.
+
+### Architect in patterns
+- Design patterns
+- Think of the charachteristics of your system.
+  
 ### Reccomended read:
 1. Thinking in Systems: International Bestseller
 2. Team Topologies
 3. Enterprise integration patterns
+4. Designing Data-Intesive applications
