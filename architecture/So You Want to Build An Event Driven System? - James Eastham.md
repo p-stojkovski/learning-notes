@@ -22,6 +22,8 @@
 - Events are first class citizens.
   
 - Types of messages: Commands, Events, Queries
+- Types of events:
+  - Notification event: simple, small package of data that notifies another system something has happened. 
 
 - Event-Driven Architecture (EDA) is a communication pattern that models system integration. It enables systems to communicate through events, promoting loose coupling and asynchronous communication.
 - EDA can improve system scalability, resilience, and developer velocity. By decoupling systems, you can make changes independently and reduce the blast radius of failures.
