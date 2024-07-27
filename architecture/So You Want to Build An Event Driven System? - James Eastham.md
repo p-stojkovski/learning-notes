@@ -25,7 +25,12 @@
 - Types of events:
   - Notification event: simple, small package of data that notifies another system something has happened. 
 
+- Event message structure:
+![image](https://github.com/user-attachments/assets/6ca9cfdc-79d4-4462-a2da-36de209e2033)
+
+
 - Event-Driven Architecture (EDA) is a communication pattern that models system integration. It enables systems to communicate through events, promoting loose coupling and asynchronous communication.
+
 - EDA can improve system scalability, resilience, and developer velocity. By decoupling systems, you can make changes independently and reduce the blast radius of failures.
 - Start small when implementing EDA. Begin with a small, non-critical part of your system to gain experience and minimize risks.
 - Use a consistent event schema. This promotes interoperability and reduces coupling between systems. Consider using the CloudEvents specification for a standardized approach.
