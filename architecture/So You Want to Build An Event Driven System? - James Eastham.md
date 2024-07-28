@@ -1,3 +1,5 @@
+## So You Want to Build An Event Driven System? - James Eastham - NDC Oslo 2024 (https://www.youtube.com/watch?v=-jgB3aGGIKc&list=LL&index=1)
+
 - An event driven architecture lets you tell the story of your business, through it's techical implementation, the language of your bussiness it's what's drives the functionality.
 
 - Communication pattern (between two services or human communication)
@@ -26,7 +28,8 @@
   - Notification event: simple, small package of data that notifies another system something has happened. 
 
 - Event message structure:
-![image](https://github.com/user-attachments/assets/6ca9cfdc-79d4-4462-a2da-36de209e2033)
+- ![image](https://github.com/user-attachments/assets/6ca9cfdc-79d4-4462-a2da-36de209e2033)
+
 
 - Event-Driven Architecture (EDA) is a communication pattern that models system integration. It enables systems to communicate through events, promoting loose coupling and asynchronous communication.
 
