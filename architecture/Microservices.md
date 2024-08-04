@@ -16,5 +16,15 @@
 2. Decentralized Data
 3. API Based Communication
 4. Resiliance and fault tolerance
-  - Always ask yourself - What would happen if this integration failed? And build accordingly.
+  1. Always ask yourself - What would happen if this integration failed? And build accordingly.
 5. Scalability
+6. Autonomous teams
+
+### The Fallacies of Distributed Computing
+- What is a distrubuted system?
+  - A system where components located on different machines work together as a single entity. 
+- "A distributed system is one in which the failure of a computer you didn't even know existed renders your own computer unuseable.
+- The network is reliable
+- Latency is zero
+- Bandwidth is infinite
+- The network is secure
