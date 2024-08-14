@@ -28,3 +28,7 @@
 - Latency is zero
 - Bandwidth is infinite
 - The network is secure
+
+### Coupling
+- A serivce boundary determines how your services interact, what they share. And don't share, which is the key of microservies.
+- Microservice should be completly independent, orgise around busniness domains will help you do that.
