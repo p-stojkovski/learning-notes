@@ -42,7 +42,6 @@
   - Functional: when two modules depend of eachother functionality
   - Sequential: where the output of one module fits directly into another.
 - Cohesion is the degree in which inside a module belong together. Things that change together, live together.
-
 - Each servce owns it's own data. And no services have a direct access to the data of another.
 - Information hiding is the principle of hiding as much data as possible behind a microservices boundary.
 
