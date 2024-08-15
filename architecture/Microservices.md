@@ -32,3 +32,27 @@
 ### Coupling
 - A serivce boundary determines how your services interact, what they share. And don't share, which is the key of microservies.
 - Microservice should be completly independent, orgise around busniness domains will help you do that.
+- Coupling is the degree of interdependence between modules in your system.
+- Your architecture should target loose coupling
+- The appropriate level of coupling depends on the level of control you have over the endpoints.
+- Types of coupling:
+  - Runtime: you need to know where the other system is at runtime
+  - Temporal: two separate modules depending of the timing or order of events, one module need to execute after another.
+  - Content: when one module can directly modify the data of another module.
+  - Functional: when two modules depend of eachother functionality
+  - Sequential: where the output of one module fits directly into another.
+- Cohesion is the degree in which inside a module belong together. Things that change together, live together.
+
+- Each servce owns it's own data. And no services have a direct access to the data of another.
+- Information hiding is the principle of hiding as much data as possible behind a microservices boundary.
+
+### Microservice Communication - Synchronous
+- One service exposes an endpoint and another service make a request to that endpoint.
+- The calling serivce waits for the response.
+- Benefit:
+  - Immediately garantee if the operation is completed or not
+  - Feels familiar, like make a method call
+- Tradeoffs:
+  - Runtime coupling
+  - If the service is down or unavailable directly impacts the calling service.
+  - Can be overloaded and latency can be increased.
