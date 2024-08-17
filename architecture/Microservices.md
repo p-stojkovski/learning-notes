@@ -79,3 +79,7 @@
 - API Gateway focuses on external communication and managing traffic between clients and services.
 - Service meshes shift the responsibility for inter-service communication out of the individual service and into a mesh. (Load balancing, correlation ids...)
 - Service Mesh focuses on internal communication and managing traffic between services.
+
+### Optimize for rate of change
+- When you are architecting your system constantly ask yourself, how do I optimize my rate of change?
+- How do I ensure different components of my system ca be shiped indenpentently with little chance of taking eachother down.
