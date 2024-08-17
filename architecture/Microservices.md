@@ -55,3 +55,27 @@
   - Runtime coupling
   - If the service is down or unavailable directly impacts the calling service.
   - Can be overloaded and latency can be increased.
+
+### Microservice Communication - Asynchronous
+- When one service makes a non blocking call to another service.
+- The current service can continue it's work without waiting a response.
+
+### Dealing with Consistency
+- Two types of Consistency:
+  - Eventual 
+  - Strong
+
+### Microservice Deployment
+- Each individual service should be indenpendetly deployable.
+
+### Code sharing
+- Sharing code should be kept to a minimum.
+- A cross cutting concern is something that will apply across all layers of an individual microservice, as well as something all services likely to need. (ex. Logging, Libary for Event Publishing, SDK for Api endpoints)
+- Avoid leaking business logic into your client libary
+
+### Service Discovery
+- Service Mesh, API Gateway
+- An API Gateway maps external requests onto internal services. Ca have rate limiting, api keys, fancy developer portals.
+- API Gateway focuses on external communication and managing traffic between clients and services.
+- Service meshes shift the responsibility for inter-service communication out of the individual service and into a mesh. (Load balancing, correlation ids...)
+- Service Mesh focuses on internal communication and managing traffic between services.
