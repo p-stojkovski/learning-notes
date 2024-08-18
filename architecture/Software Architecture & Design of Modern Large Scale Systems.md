@@ -66,3 +66,15 @@ and how those components communicate with each other to fulfill the systems requ
   - Waste months of engineering time
   - Build a system that doesn't meet our requirements
 - Restructuring a system that was not architected correctly is very hard and expensive
+
+#### Software Development Cycle
+![image](https://github.com/user-attachments/assets/12c24154-3ef9-4800-8fa1-1b54fd17705f)
+
+#### Challenges of Software Architecture
+- We **cannot** prove Software Architecture to either:
+  - Correct
+  - Optimal
+- What we **can** do to quarantee sucess is follow:
+  - Methodical Design Process
+  - Architectural Patterns
+  - Best Practices  
