@@ -1,5 +1,7 @@
 # Microservices Architecture
 
+## 1. FUNDAMENTALS
+
 ### Microservices
 - Microserivce is an independently deployable unit that performs one job extremely well and interacts with other services over well defined interface.
 - The only communication allowed between services is via service interace calls over the network (api, message, event driven).
@@ -83,3 +85,13 @@
 ### Optimize for rate of change
 - When you are architecting your system constantly ask yourself, how do I optimize my rate of change?
 - How do I ensure different components of my system ca be shiped indenpentently with little chance of taking eachother down.
+
+## 2. INTEGRATION
+
+### Shared Data
+- File based integrtions
+- Share with data with files between services.
+- What is the format of the file and the schema?
+- Where the files will be stored, what it the folder structure, what is the naming convention, what happens to files after being processed, how do you deal with errors (if single record or entire file fails)
+- Eventual consistency is a challenge
+- File transfer is a very good tool in your toolbox if you integrating you new system into a old legacy system.
