@@ -129,3 +129,7 @@ In this example:
 - Where the files will be stored, what it the folder structure, what is the naming convention, what happens to files after being processed, how do you deal with errors (if single record or entire file fails)
 - Eventual consistency is a challenge
 - File transfer is a very good tool in your toolbox if you integrating you new system into a old legacy system.
+
+### Request/Response
+- Sync communication between components
+- RPC, REST, GraphQL
