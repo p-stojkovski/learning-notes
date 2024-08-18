@@ -68,6 +68,8 @@ and how those components communicate with each other to fulfill the systems requ
 - Restructuring a system that was not architected correctly is very hard and expensive
 
 #### Software Development Cycle
+- Software architecture is the **output** of the **design** phase and the **input** to the **implementation**.
+
 ![image](https://github.com/user-attachments/assets/12c24154-3ef9-4800-8fa1-1b54fd17705f)
 
 #### Challenges of Software Architecture
