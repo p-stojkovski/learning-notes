@@ -165,3 +165,47 @@ Requirement gathering steps:
 ![image](https://github.com/user-attachments/assets/76ec1be3-cfc1-49b0-9fe5-7b8454ba1f35)
 ![image](https://github.com/user-attachments/assets/37f28c95-ead0-40d2-9af9-eec07846bd4f)
 
+#### System Quality Attributes Requirements
+**Quality Attributes - Motivation:**
+- Systems are frequently redesigned and restructured NOT because of functional requirements
+- But because the system as it stands:
+  - Isn't fast enough
+  - Doesn't scale
+  - Slow to develop
+  - Hard to maintain
+  - Not secure enough
+
+**Quality Attributes - Definition:**
+- Quality attiutes are non functional requirements
+- They descibe:
+  - The qualities of the functional requirements
+  - The overall properties of the system
+- Provide a quality measure on how well our system performs on a particular dimension
+- They have direct correlation with the architecture of our system
+![image](https://github.com/user-attachments/assets/1ded7e73-096c-4235-98e0-0ea471130034)
+![image](https://github.com/user-attachments/assets/8172536f-8173-48da-960f-6d74808fde4c)
+![image](https://github.com/user-attachments/assets/6ca03df1-8c0c-4214-a7be-0eddcbc35091)
+
+**Quality Attributes Considirations**
+**1. Important considirations - Testability and Measurability**
+- Quality attributes need to be:
+  - Measurable
+  - Testable
+- If we can prove that our system stisfied the required quality attribute we don't know if our system performs well or poorly.
+
+**2. Important considirations - Tradeoffs**
+- No single software architecutre can provide all the quality attributes
+- Certian quality attributes contradict one another
+- Some combinations of quality attributes are very hard/impossible to achieve
+- We (Software Architects) need to make the right **tradeoff**
+![image](https://github.com/user-attachments/assets/8b62ec1a-c676-48ff-a4a3-5fbcdd2cd768)
+
+**3. Important considirations - Feasibility**
+- We need to make sure that the system is capable of delivering with the client asking for
+- The client may ask for something that is either:
+  - Technicallly impossible
+  - Prohibitively expensive to implement
+![image](https://github.com/user-attachments/assets/a1c0e87b-722c-42a0-8dac-76976bcbeb69)
+
+
+
