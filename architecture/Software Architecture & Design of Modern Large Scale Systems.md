@@ -83,21 +83,21 @@ and how those components communicate with each other to fulfill the systems requ
 
 ## System Requirements & Architectural Drivers
 
-#### Introduction to System Design & Architectural Drivers
-Requirements - Motivation:
+### Introduction to System Design & Architectural Drivers
+#### Requirements - Motivation:
 - Format description of what we need to build
 - Large scale system requirements are different than the usual requirements we typically get for implementing:
   - A method
   - An algotithm
   - Class
 
-High Level of Ambiguity
+**High Level of Ambiguity**
 - System Design has high level of ambiguity
 - Two reasons: 
   - The persion providing the requirements is often not an engineer and may even br not very techical
   - Getting the requirements is part of the solution: The client doesn't always know what they need, only what prblem they need solved.
  
-Importance of Gathering Requirements
+**Importance of Gathering Requirements**
 - What happens if we don't get the requirements right?
   - We can simply build something and then fix it.
   - Seemingly there is no cost of materials in software so changes should be cheap?
@@ -108,4 +108,33 @@ Importance of Gathering Requirements
   - Contracts include financial obligations
   - Reputation and brand
 
-Requirements - Classification:
+#### Requirements - Classification:
+**Types of Requirements (Architectural drivers):**
+- Feature of the System
+  - Functional Requirements
+- Quality Attributes
+  - Non-Functional Requirements
+- System Constrains
+  - Limitations and boundaries of the system 
+
+**Features / Functional Requirements**
+- Describe the system behavior - what "the system must do"
+- Easyly tied to the objective of our system
+- Functional requirements do not determine its architecture
+- Generally, any architecture can acheve any feature
+
+**Quality Attributes / Non-Functional Requirements**
+- System properties that "the system must have"
+- Examples:
+  - Scalability
+  - Availability
+  - Reliability
+  - Security
+  - Performance
+  - ..... 
+- The **quality attributes** dictate the software architecture of our system.
+
+**System Constrains**
+- Time constrains - Strict deadlines
+- Financial Constrains - Limited budget
+- Staffing Constrains - Small number of available engineers
