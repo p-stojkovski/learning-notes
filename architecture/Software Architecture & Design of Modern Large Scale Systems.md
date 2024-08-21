@@ -138,3 +138,30 @@ and how those components communicate with each other to fulfill the systems requ
 - Time constrains - Strict deadlines
 - Financial Constrains - Limited budget
 - Staffing Constrains - Small number of available engineers
+
+#### Feature Requirements - Step by step process:
+**Formal Method of gathering functional requirements**
+
+Native way:
+- Ask the client to describe everything they need
+  - For complex systems it is not good approach
+
+More powerful method of gathering requirements:
+- Use cases
+  - Situation/Scenario in which our system is used   
+- User Flows
+  - A step-by-step/graphical representation of each use case
+
+Requirement gathering steps:
+- Identify all the actors/users in our system
+- Capture and describe all the possible use-cases/scenarios
+- User Flow - Expand each use case through flow of events
+  - Each event contains: Action and Data 
+
+**Example with a swauence diagram**
+- Sequence Diagram - Diagram that represents interactions between actors and objects
+![image](https://github.com/user-attachments/assets/130fe413-0e42-4c0d-9d2d-78ba1a3b008c)
+![image](https://github.com/user-attachments/assets/09f7af65-3dbc-412a-865d-b03f7ec6e343)
+![image](https://github.com/user-attachments/assets/76ec1be3-cfc1-49b0-9fe5-7b8454ba1f35)
+![image](https://github.com/user-attachments/assets/37f28c95-ead0-40d2-9af9-eec07846bd4f)
+
