@@ -187,6 +187,7 @@ Requirement gathering steps:
 ![image](https://github.com/user-attachments/assets/6ca03df1-8c0c-4214-a7be-0eddcbc35091)
 
 **Quality Attributes Considirations**
+
 **1. Important considirations - Testability and Measurability**
 - Quality attributes need to be:
   - Measurable
