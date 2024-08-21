@@ -80,3 +80,32 @@ and how those components communicate with each other to fulfill the systems requ
   - Methodical Design Process
   - Architectural Patterns
   - Best Practices  
+
+## System Requirements & Architectural Drivers
+
+#### Introduction to System Design & Architectural Drivers
+Requirements - Motivation:
+- Format description of what we need to build
+- Large scale system requirements are different than the usual requirements we typically get for implementing:
+  - A method
+  - An algotithm
+  - Class
+
+High Level of Ambiguity
+- System Design has high level of ambiguity
+- Two reasons: 
+  - The persion providing the requirements is often not an engineer and may even br not very techical
+  - Getting the requirements is part of the solution: The client doesn't always know what they need, only what prblem they need solved.
+ 
+Importance of Gathering Requirements
+- What happens if we don't get the requirements right?
+  - We can simply build something and then fix it.
+  - Seemingly there is no cost of materials in software so changes should be cheap?
+  - Large scale systems are big projects that cannot be easily changed.
+  - Many engineers are involved.
+  - Many months of engineering work
+  - Hardware and Software costs
+  - Contracts include financial obligations
+  - Reputation and brand
+
+Requirements - Classification:
