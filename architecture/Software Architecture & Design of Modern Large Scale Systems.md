@@ -237,3 +237,31 @@ Requirement gathering steps:
   - Having to support certian platforms, browsers or OS 
 - Technical constraints may seem like they belong to implementation and not to software architecture
 - In practice, they affect the decisions we make in the design phase and put restrictions on our architecture.
+
+**Business constraints**
+- As engineers, we make the right decisions and architectural choices from a technical perspective
+- This forces us to make sacrifices in:
+  - Architecture
+  - Implementation
+- Example:
+  - Limited budget or a strict deadline will make us have very different choices than if we had an unlimited budget and unlimited time
+  - Different software architecureal patterns are based on suitability between small startups or bigger organizations
+  - Usage of third-party services with their own APIs and architectural paradigms as part of our architecture.
+
+**Regulatory/legal constraints**
+- Regulatory constraints may be:
+  - Global
+  - Specific to a region
+
+We shouldn't take any given constraint lightly.
+- There should be distinction between:
+  - Real constraints
+  - Self-imposed constraints
+- Example:
+  - External rules and regulations may not have room to negotiate
+  - Internal constraints can be negotiated
+
+Use loosely coupled architecture
+- Example:
+  -  If limited to a database /third-party service, we need to make sure our system is not tightly couplled to that technology or APIs
+  -  Different parts of the system can be decoupled to be easily replaced or updated independently
