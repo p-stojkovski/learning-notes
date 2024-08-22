@@ -208,5 +208,30 @@ Requirement gathering steps:
   - Prohibitively expensive to implement
 ![image](https://github.com/user-attachments/assets/a1c0e87b-722c-42a0-8dac-76976bcbeb69)
 
+### System Constraints in Software Architecture
 
+#### System Constrains - Introduction
+- Once we define what our system must do, we have freedom on how to structure our system
+- While defining the final architecture, we have to make a lot of decisions
+- For quality attributes, we are expected to make trade-offs
 
+**System Constrains - Definition**
+- "A system constraint is essentially a decision that was already either fully or partially made for us, restricting our degrees of freedom"
+- But this is not always a bad thing
+- Instead of looking at a constraint as a choice that was taken away, we look at it as a decision that was already made.
+- System constraints are referred as pillars for software architecture because:
+  - They provide us with a solid starting point
+  - The rest of the system need to designed around them
+
+**Types of Constraints**
+- There are three types of constraints:
+  - **Techical constraints**
+  - Business constraints
+  - Regulatory/legal constraints
+
+**Techical constraints**
+- Examples of techical constraints include:
+  - Being locked to a particular hardware/cloud vendor
+  - Having to use particular programming language
+  - Having to use a particular database or techology
+  - Having to support certian platforms, browsers or OS 
