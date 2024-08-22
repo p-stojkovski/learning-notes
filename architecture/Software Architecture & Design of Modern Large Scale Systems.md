@@ -235,3 +235,5 @@ Requirement gathering steps:
   - Having to use particular programming language
   - Having to use a particular database or techology
   - Having to support certian platforms, browsers or OS 
+- Technical constraints may seem like they belong to implementation and not to software architecture
+- In practice, they affect the decisions we make in the design phase and put restrictions on our architecture.
