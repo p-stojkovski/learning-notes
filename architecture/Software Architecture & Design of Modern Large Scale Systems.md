@@ -265,3 +265,30 @@ Use loosely coupled architecture
 - Example:
   -  If limited to a database /third-party service, we need to make sure our system is not tightly couplled to that technology or APIs
   -  Different parts of the system can be decoupled to be easily replaced or updated independently
+
+## Most important quality attributes in large scale systems
+
+### Performance
+
+#### Response time
+- Time between a client sending a request and receiving a response
+- Response Time = Processing Time + Waiting Time
+  - Processing time: Time spent in our system actively process in the request and builing/sending response
+  - Waiting Time (Latency): Duration of time request/response spends inactivelt in our system
+  - Latency = Delay
+- Response time is an important metric when the request is in the critical path of a user interaction
+
+#### Throughput
+- Amount of work performend by our system per unit of time
+  - Measured in tasks/seconds
+- Amount of data processed by our system per unit of time
+  - Measured in bits/second, Bytes/second, MBytes/second
+
+#### Important Considirations
+- Measuring response time correctly
+- Response time distribution
+  - Percentile distribution
+  - Tail latency
+  - Performance degradation
+    - Steer degradation
+    - High resource utilization
