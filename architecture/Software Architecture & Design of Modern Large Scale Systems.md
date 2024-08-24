@@ -292,3 +292,49 @@ Use loosely coupled architecture
   - Performance degradation
     - Steer degradation
     - High resource utilization
+
+### Scalability
+
+#### Motivation & Definition
+
+##### Trafic Petterns
+- The load/traffic on our system never stays the same
+- It can follow different patterns
+
+##### Definiton
+- The masure of a system's ability to handle a growing amount of work, in an easy and cost effective way, by adding resources to the system.
+![image](https://github.com/user-attachments/assets/6485a055-3d9b-426e-aac7-10b46bf9f7ac)
+
+
+##### Types of scalability
+- Scale up/Vertical Scalability
+- Scale out/Horizontal Scalability
+- Team/Organization Scalability
+![image](https://github.com/user-attachments/assets/41c495e7-9061-47e5-9e5b-9da1602a734f)
+
+#### Vertical Scalability
+- Adding resources or upgrading the existing resources on a single computer, to allow our system to handle higher traffic or load.
+- Pros:
+  -  Any application can benefit from it
+  -  No code changes are required
+  -  The migration between different machines is very easy
+- Cons:
+  - The scope of upgrade is limited
+  - We are locked toa centrilized system which cannot provide:
+    - High Availability
+    - Fault Tolerance  
+
+#### Horizontal Scalability
+- Adding more resources in a form of new instances running on a different machines, to allow our system to handle higher traffic or load.
+- Pros:
+  - No limit on scalability
+  - It's easy to add/remove machines
+  - If designed correctly we get:
+    - High Availability
+    - Fault Tolerance 
+- Cons:
+  - Iniital code changes may be required
+  - Increased complexity, coordination overhead
+
+#### Team/Organization Scalability 
+- Software architecture impact engineering velocity (team productivity)
