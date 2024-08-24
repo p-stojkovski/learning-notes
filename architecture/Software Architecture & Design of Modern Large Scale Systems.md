@@ -337,4 +337,5 @@ Use loosely coupled architecture
   - Increased complexity, coordination overhead
 
 #### Team/Organization Scalability 
+- Increasing productivity while hiring more negineers into the team
 - Software architecture impact engineering velocity (team productivity)
