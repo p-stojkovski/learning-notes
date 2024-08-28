@@ -475,3 +475,15 @@ There are 3 sources of failures:
     - Common Use:
       - In databases, rollbacks are used to return to a previous correct state if data integrity is compromised.
       - In software deployments, if a new version causes widespread errors, roll back to the previous stable version to maintain system availability.
+
+### SLA, SLO, SLI
+
+#### SLA
+![image](https://github.com/user-attachments/assets/175b8819-71df-4e7c-9862-deb9c5e574e4)
+
+#### SLO
+![image](https://github.com/user-attachments/assets/ecc6fa28-eafb-4444-8b14-d162767c939d)
+
+### SLI
+
+
