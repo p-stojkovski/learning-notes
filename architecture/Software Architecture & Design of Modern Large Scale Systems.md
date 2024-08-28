@@ -362,3 +362,116 @@ Use loosely coupled architecture
 
 ![image](https://github.com/user-attachments/assets/ceee1488-9dec-481f-9cc5-0c89597c35aa)
 
+### Fault Tolerance and High Availability
+
+#### Sources of failure
+
+There are 3 sources of failures:
+- Human errors:
+  - Pushing a faulty config to production
+  - Running the wrong command/script
+  - Deploying an incompletely tested new version of software
+- Software errors:
+  - Long garbage collections
+  - Out-of-memmory exceptions
+  - Null pointer exceptions
+  - Segmentation faults
+- Hardware failures:
+  - Servers/routers/storage devices breaking down due to limited shelf-life
+  - Power outages due to natural disasters
+  - Network failures because of:
+    - Infrastructure issues
+    - General congestion
+
+#### Methods of Achieving high availability and fault tolerance
+- Faliures will happen dispite:
+  - Improvements to our code
+  - Review, testing, and release processes
+  - Performing ongoing maintenance to our hardware
+- Fault tolerance is the best way to achieve high availability in our system 
+
+#### Fault Tolerance
+- Fault tolerance enables our system to remain operational and available to the users despite faliures within one or multiple of its components
+- When faliures happen a fault-tolerant system will:
+  - Continue operating at the same/reduced level of performance
+  - Prevent the system from becoming unavailable
+- Fault tolerance revolves around 3 major tactics:
+  - Failure prevention
+  - Failure detection and isolation
+  - Recovery
+
+#### Failure prevention
+- To prevent our entire system from going down, eliminate any single point of failure on our system
+- Examples:
+  -  One server where we're running our application
+  -  Storing all our data on the one instance of our database that runs on a single computer
+- The best way to eliminate a single point of failure is through Replication and Redundancy
+
+![image](https://github.com/user-attachments/assets/fb8eef47-87c2-4859-9e46-4738687ef834)
+![image](https://github.com/user-attachments/assets/6b1cc4b1-1994-4080-bfb6-db457d81dd81)
+
+##### Types of Redundancy
+- Spatial Redundancy - Running replicas of our application on different computers
+- Time Redundancy - Repeating the same operation/request multiple times until we succeed/give up
+
+##### Strategies for Redundancy and Replication
+- Two strategies which are extensively used in the industry in different systems:
+  - Active-Active architecture, If we take the database example, it means that requests go to all the replicas, which forces them to all be in sync with each other. So if one of the replicas goes down, then the other replicas can step in and take all the requests immediately.
+  - ![image](https://github.com/user-attachments/assets/22a772c7-754a-42e2-851d-1933ec13c895)
+  - Active-Passive architecture, which implies that we have one primary instance or replica that takes all the requests, and the other passive replica or replicas follow the primary replica by taking periodic snapshots of its state.
+  - ![image](https://github.com/user-attachments/assets/af2a4800-ea0b-4749-8701-e897d20d11f9)
+
+##### Advanages of Active-Active Architecture
+- Load is spread amoung all the replicas
+- Identical to horizontal scalability
+- Allows more traffic
+- Better performance
+
+##### Disadvanages of Active-Active Architecture
+- All replicas are taking requests
+- Additional coordination required to keep active replicas in sync
+
+##### Advanages of Active-Pasive Architecture
+- Implementation is easier
+- There is a clear leader with up-to-date data
+- Rest of the replicas are followers
+
+##### Disadvanages of Active-Pasive Architecture
+- Ability to scale our system is lost
+- All the requests still go to only one machine
+
+#### Failure detection and isolation
+![image](https://github.com/user-attachments/assets/7a28cb38-713f-4d02-aeaa-cba5bb7fde47)
+
+- Achieve fault tolerance by detecting and isolating faulty instances in a system.
+- Example: If an application instance crashes due to software or hardware issues, it must be detected and isolated to prevent further issues.
+- Detection Methods:
+  - Monitoring Service:
+    - A separate system that monitors the health of instances.
+    - Health Checks: Sends periodic health check messages to instances.
+    - Heartbeat Mechanism: Listens for periodic "heartbeat" messages from healthy instances.
+    - Failure Detection: If the monitoring service does not receive a response within a predefined duration, it assumes the server is unavailable.
+- False Positives:
+  - Network Issues or Temporary Delays:
+    - Temporary issues like network latency or garbage collection can cause false positives.
+    - False positives are acceptable as long as false negatives are avoided.
+- Advanced Monitoring:
+  - Error Rate Monitoring:
+    - Tracks the number of exceptions or errors per minute.
+    - A high error rate may indicate a failure.
+  - Response Time Monitoring:
+    - Monitors how long each host takes to respond.
+    - Excessively long response times may indicate a problem with the server.
+
+#### Recovery from Failure
+- Achieve high availability by quickly recovering from failures, minimizing downtime, and restoring normal operations.
+- Key Principle:
+  - High Availability Formula: Even if failures occur, if recovery is faster than the user can notice, the system remains highly available.
+- Actions After Detecting and Isolating a Faulty Instance:
+  - Stop Traffic/Workload: Cease sending traffic or workload to the faulty host to prevent further issues.
+  - Restart the Instance: Attempt to restart the faulty instance with the hope that the problem will be resolved upon reboot.
+  - Rollback:
+    - Definition: Revert to a previous version that was stable and correct.
+    - Common Use:
+      - In databases, rollbacks are used to return to a previous correct state if data integrity is compromised.
+      - In software deployments, if a new version causes widespread errors, roll back to the previous stable version to maintain system availability.
