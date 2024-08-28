@@ -1,6 +1,6 @@
 # Software Architecture & Design of Modern Large Scale Systems
 
-## Introduction
+## 1. Introduction
 
 ### Software Architecture
 - Everything we build has a structure.
@@ -81,7 +81,7 @@ and how those components communicate with each other to fulfill the systems requ
   - Architectural Patterns
   - Best Practices  
 
-## System Requirements & Architectural Drivers
+## 2. System Requirements & Architectural Drivers
 
 ### Introduction to System Design & Architectural Drivers
 #### Requirements - Motivation:
@@ -266,7 +266,7 @@ Use loosely coupled architecture
   -  If limited to a database /third-party service, we need to make sure our system is not tightly couplled to that technology or APIs
   -  Different parts of the system can be decoupled to be easily replaced or updated independently
 
-## Most important quality attributes in large scale systems
+## 3. Most important quality attributes in large scale systems
 
 ### Performance
 
