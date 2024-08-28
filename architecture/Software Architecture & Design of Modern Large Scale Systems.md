@@ -339,3 +339,26 @@ Use loosely coupled architecture
 #### Team/Organization Scalability 
 - Increasing productivity while hiring more negineers into the team
 - Software architecture impact engineering velocity (team productivity)
+
+### Availablity
+
+#### Introduction
+- Availability is an important attribute when designing a system
+- It has the gratest impact on:
+  - Our users
+  - Our business
+- Two risrs that our business faces of our system goes down:
+  - Loss of revenue
+  - Loss of customers to our compoetitors 
+
+#### Definition
+- The fraction of time/probability that our service is operationally functional and accessible to the user.
+
+#### Formula of Availability
+- Uptime = Time that our system is operationally functional and accessible to the user
+- Downtime = Time that our system is unavailable to the user
+- Availability (in %) = Uptime / (Entire time our system is running)
+- Availability = Uptime / (Uptime + Downtime)
+
+![image](https://github.com/user-attachments/assets/ceee1488-9dec-481f-9cc5-0c89597c35aa)
+
