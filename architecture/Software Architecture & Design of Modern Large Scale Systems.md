@@ -478,12 +478,46 @@ There are 3 sources of failures:
 
 ### SLA, SLO, SLI
 
-#### SLA
+#### Service Level Agreement - SLA
+- Definition: A legal contract between a service provider and clients or users.
+- Purpose: Represents promises regarding service quality (availability, performance, data durability, response times, etc.).
+- Penalties: Details financial consequences for failing to meet promises (refunds, service credits, extensions).
+- Applicability:
+  - Common for paying external users.
+  - Sometimes for free external users (e.g., compensations during trials).
+  - Rarely for internal users but can exist to ensure service quality among internal teams.
+
 ![image](https://github.com/user-attachments/assets/175b8819-71df-4e7c-9862-deb9c5e574e4)
 
-#### SLO
+#### Service Level Objective - SLO
+- Definition: Individual goals for system performance and quality.
+- Examples:
+  - Availability of three nines (99.9% uptime).
+  - Response time of less than 100 milliseconds at the 90th percentile.
+  - Issue resolution time of 24-48 hours.
+- Relation to SLA: Each SLO is a specific agreement within the broader SLA.
+- Importance: Even without an SLA, SLOs are crucial for setting expectations for system performance.
+
 ![image](https://github.com/user-attachments/assets/ecc6fa28-eafb-4444-8b14-d162767c939d)
 
-### SLI
+#### Service Level Indicator - SLI
+- Definition: Quantitative measures of compliance with SLOs.
+- Examples:
+  - Percentage of successful user requests (availability).
+  - Response times and percentiles.
+- Purpose: To measure and compare actual performance against the goals set by SLOs.
+- Importance: Essential for validating SLOs and ensuring SLA compliance.
 
-
+#### Considerations for Defining SLOs
+1. Focus on Important Metrics:
+  - Define SLOs based on metrics that matter most to users.
+  - Select appropriate SLIs to track these metrics.
+2. Limit the Number of SLOs:
+  - Fewer SLOs are easier to manage and prioritize.
+  - Focus on key objectives to align architecture and resources.
+3. Set Realistic Goals:
+  - Commit to achievable SLOs with room for error.
+  - Differentiate between external and internal SLOs to balance quality and cost.
+4. Recovery Plan:
+  - Develop a plan for handling failures or performance issues.
+  - Include automatic alerts, failovers, rollbacks, scaling policies, and predefined procedures.
