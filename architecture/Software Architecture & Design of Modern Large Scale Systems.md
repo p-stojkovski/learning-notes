@@ -509,15 +509,15 @@ There are 3 sources of failures:
 - Importance: Essential for validating SLOs and ensuring SLA compliance.
 
 #### Considerations for Defining SLOs
-1. Focus on Important Metrics:
+- Focus on Important Metrics:
   - Define SLOs based on metrics that matter most to users.
   - Select appropriate SLIs to track these metrics.
-2. Limit the Number of SLOs:
+- Limit the Number of SLOs:
   - Fewer SLOs are easier to manage and prioritize.
   - Focus on key objectives to align architecture and resources.
-3. Set Realistic Goals:
+- Set Realistic Goals:
   - Commit to achievable SLOs with room for error.
   - Differentiate between external and internal SLOs to balance quality and cost.
-4. Recovery Plan:
+- Recovery Plan:
   - Develop a plan for handling failures or performance issues.
   - Include automatic alerts, failovers, rollbacks, scaling policies, and predefined procedures.
