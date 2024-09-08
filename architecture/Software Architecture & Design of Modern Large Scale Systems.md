@@ -521,3 +521,75 @@ There are 3 sources of failures:
 - Recovery Plan:
   - Develop a plan for handling failures or performance issues.
   - Include automatic alerts, failovers, rollbacks, scaling policies, and predefined procedures.
+
+## 4. API Design
+
+### Introduction to API Design for Software Architects
+
+**1. Introduction to APIs**
+- **What is an API?**
+  - API stands for **Application Programming Interface**. It acts as a **contract** between the engineers who develop the system and the client applications that use it.
+  - The API defines how different software components communicate with each other, enabling systems to exchange data and functions without exposing internal workings.
+  
+- **Why do we need an API?**
+  - Once we have the functional requirements of a system, we think of the system as a **black box** with behavior and a clear interface for interacting with it.
+  - Since other applications will be using our system, we need to define how they can access it. This interface is called the API.
+
+- **Who uses the API?**
+  - **External clients**: like web browsers or mobile apps.
+  - **Other systems**: internal systems or systems from other companies.
+  - **Internal components**: even within our system, different components communicate using APIs.
+
+---
+
+**2. Types of APIs**
+- **Public APIs**:
+  - Available to the public, anyone can use them.
+  - Users typically need to **register** before using the system, providing **better control**, **security**, and the ability to block misbehaving users.
+  
+- **Private APIs**:
+  - Used internally within an organization, not exposed to external users.
+  - They enable different teams in the organization to collaborate more effectively without exposing sensitive information outside.
+
+- **Partner APIs**:
+  - Similar to public APIs but are only exposed to select business partners with an agreement, such as customers or service subscribers.
+
+---
+
+**3. Benefits of APIs**
+- **Encapsulation**: The API allows external systems to use our functionality without knowing about the system’s internal design or structure.
+- **Parallel development**: Once the API is defined, client applications can begin integrating even before our system is fully implemented.
+- **Easier internal design**: The API defines the entry points and helps organize our system structure more clearly.
+
+---
+
+**4. Best Practices for Designing APIs**
+- **Encapsulation**: 
+  - The API should hide the system’s internal design. Users should not need to understand how the system works internally to use it.
+  - The API should be **decoupled** from the internal structure so that changes to the system don’t affect the API users.
+
+- **Ease of use**:
+  - The API should be easy to understand and use. This can be achieved by:
+    - Providing **clear, descriptive names** for actions and resources.
+    - Offering only one way to access certain data or perform tasks to avoid confusion.
+    - Exposing only necessary information and keeping things **consistent** throughout the API.
+
+- **Idempotent operations**:
+  - Operations should be **idempotent** when possible. This means performing an action multiple times won’t change the result.
+  - For example, updating a user’s address is idempotent because doing it once or multiple times will have the same effect. 
+  - Idempotency is important when dealing with network issues like lost requests. If a client isn’t sure whether a request was received, they can safely resend it.
+
+- **Pagination**:
+  - When the response contains a large amount of data, it’s better to **paginate** the results rather than send all the data at once.
+  - This improves performance and user experience, as clients only receive small, manageable chunks of data.
+  - For example, a search engine returns only a few results per page, instead of all possible matches.
+
+- **Asynchronous operations**:
+  - For long-running tasks, the API should support **asynchronous operations**.
+  - Instead of waiting for the task to complete, the system sends back an immediate response with a tracking ID, allowing the client to check the status of the task later.
+  - This is useful for operations like generating large reports or processing large datasets.
+
+- **Versioning**:
+  - APIs should be **versioned** to accommodate future changes. Versioning allows us to introduce new features or make improvements without breaking existing clients’ functionality.
+  - Maintaining multiple versions ensures clients have time to transition to newer versions gradually.
+
