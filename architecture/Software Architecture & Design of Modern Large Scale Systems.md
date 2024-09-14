@@ -644,4 +644,75 @@ There are 3 sources of failures:
 - Benefits include simplicity and local transparency, while drawbacks include performance and reliability issues.
 - RPC is well-suited for backend communication but may not be the best choice for frontend clients or data-centric operations.
 
+### REST API: Overview and Key Concepts
+
+#### Core Characteristics of REST API:
+- **Resource-Oriented**: The primary abstraction is **resources** (e.g., movies, users), not methods.
+- **Representation of Resources**: Resources are exposed via URIs (Uniform Resource Identifiers), and when requested, their current **state** is returned to the client.
+- **Protocol**: REST APIs commonly use **HTTP** as the protocol for communication.
+- **Statelessness**: Servers do not store session data, leading to improved **scalability**.
+- **Cacheable**: Responses can be marked as **cacheable** or non-cacheable to enhance performance.
+
+####  REST API vs RPC API
+- **RPC (Remote Procedure Call)**: Focuses on **methods** (actions), where the client makes method calls, and new operations require adding more methods.
+- **REST API**: Focuses on **resources** (data/entities), where a few HTTP methods (GET, POST, PUT, DELETE) allow interaction with these resources.
+
+####  REST Constraints and Benefits
+
+1. **Scalability and Statelessness**:  
+   REST APIs must be **stateless**, meaning each request from a client to the server must contain all the information necessary to understand the request. Servers don't keep track of client states, so multiple servers can handle requests from the same client, improving scalability and availability.
+   
+2. **Cacheability**:  
+   Responses can be cached to minimize server load. REST APIs can explicitly state whether responses are cacheable, reducing unnecessary round trips between client and server.
+
+3. **Uniform Interface**:  
+   RESTful systems use a standard set of **methods** to manipulate resources, unlike RPC systems where many custom methods can be defined.
+
+#### Hypermedia and Dynamic Nature of REST API
+A key feature of RESTful APIs is **Hypermedia as the Engine of Application State (HATEOAS)**. In response to a request, along with the resource's state, REST APIs also send **hypermedia links** that provide further actions the client can take. This creates a **dynamic** system where the client's internal state can change by following the links provided in the server's responses.
+
+#### Resources in REST API
+Resources represent **entities** within a system and can be anything such as users, movies, or orders. Resources are organized in a **hierarchical** structure using **URIs**:
+- Simple resource: A specific entity (e.g., `/users/1`).
+- Collection resource: A set of entities (e.g., `/users` for a list of users).
+
+#### Best Practices for Resource Naming:
+1. **Use nouns, not verbs**: Resources should be named with nouns to differentiate between the resource and actions (e.g., `/users`, not `/getUsers`).
+2. **Singular vs. Plural**: Use plural names for collections (e.g., `/movies`) and singular names for individual resources (e.g., `/movies/1`).
+3. **Meaningful Names**: Avoid generic names like `items` or `elements`; use clear, descriptive names to ensure usability.
+4. **URL-friendly**: Resource identifiers should be unique and safe for web usage.
+
+#### HTTP Methods and REST Operations
+REST APIs use the following **HTTP methods** to interact with resources:
+
+- **GET**: Retrieve the state of a resource (read-only).
+- **POST**: Create a new resource.
+- **PUT**: Update an existing resource.
+- **DELETE**: Remove a resource.
+
+The **GET**, **PUT**, and **DELETE** methods are **idempotent**, meaning the effect of applying them multiple times is the same as applying them once. Additionally, **GET** requests do not alter the state of the resource and are **safe** to cache.
+
+#### Designing a REST API Step-by-Step
+
+Let's go through the process of creating a REST API for a **movie streaming service**.
+
+1. **Identify Entities**:  
+   The main entities in our service might be users, movies, reviews, and actors.
+   
+2. **Map Entities to URIs**:  
+   Each entity corresponds to a resource, and URIs are used to organize them in a hierarchy:
+   - `/users`: Collection of users.
+   - `/users/{userId}`: A specific user.
+   - `/movies`: Collection of movies.
+   - `/movies/{movieId}/reviews`: Reviews for a specific movie.
+   - `/actors`: Collection of actors.
+
+3. **Resource Representation**:  
+   Resources can be represented in different formats, but **JSON** is commonly used. For example, the representation of a movie resource might include details like the title, release date, and associated links to reviews and actors.
+
+4. **Assign HTTP Methods**:
+   - **POST** on `/users`: Create a new user.
+   - **GET** on `/users/{userId}`: Retrieve a user's details.
+   - **PUT** on `/users/{userId}`: Update a user's profile.
+   - **DELETE** on `/users/{userId}`: Remove a user from the system.
 
