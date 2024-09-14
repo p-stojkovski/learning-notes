@@ -593,3 +593,55 @@ There are 3 sources of failures:
   - APIs should be **versioned** to accommodate future changes. Versioning allows us to introduce new features or make improvements without breaking existing clients’ functionality.
   - Maintaining multiple versions ensures clients have time to transition to newer versions gradually.
 
+### RPC
+
+#### What is RPC?
+- **Remote Procedure Call (RPC)** allows a **client application** to execute a **subroutine** on a **remote server**.
+- RPC makes the remote method call look like a **local method call** in the client’s code. This feature is called **local transparency**.
+- It supports multiple programming languages, allowing applications written in different languages to communicate.
+
+#### How does RPC work?
+1. The **API and data types** are defined using an **Interface Description Language (IDL)** specific to the RPC framework.
+2. The RPC framework **generates code** for two parts:
+   - **Client stub**: Automatically handles sending data and making the remote call.
+   - **Server stub**: Receives the request, deserializes the data, and executes the method.
+3. When the client calls a method, the **client stub**:
+   - **Serializes** (encodes) the data and sends it to the server.
+4. The **server stub**:
+   - **Deserializes** (decodes) the data, executes the requested method, and returns the result.
+5. The **client stub** receives the result, deserializes it, and presents it as the return value for the method.
+
+![image](https://github.com/user-attachments/assets/80fbb301-2275-4acb-85fa-b5852241908e)
+![image](https://github.com/user-attachments/assets/812ad561-66c3-4b63-8494-c4047ba6224c)
+![image](https://github.com/user-attachments/assets/bd8d7be3-fea8-47dc-bd47-9a30df2629d2)
+
+#### Benefits of RPC
+1. **Simplicity** for client developers: Once the client stub is generated, developers can call remote methods as if they were local, without needing to manage communication details.
+2. **Abstraction**: All the complexities of network communication (data encoding/decoding) are hidden from the developer.
+3. **Cross-language support**: RPC frameworks can enable communication between different programming languages.
+
+#### Drawbacks of RPC
+1. **Slower performance**: Remote methods are much slower than local ones because they rely on network communication.
+   - This may create **unexpected performance issues**, as remote calls appear similar to fast local calls in code.
+   - To mitigate this, slow methods should have **asynchronous** versions, so the client code doesn’t block waiting for a result.
+2. **Unreliability**: Since the client and server are on separate machines, communication issues can arise (e.g., lost messages).
+   - The client may not know whether a failure happened or whether the server processed the request.
+   - One way to reduce risk is by making operations **idempotent**, so repeating a call doesn’t cause unintended side effects.
+
+#### When to use RPC
+1. **Backend-to-backend communication**: RPC is best for communication between backend systems, especially within large-scale systems.
+2. **Internal system communication**: RPC can help connect different parts of the same system seamlessly.
+3. **Action-oriented APIs**: RPC is suitable when the focus is on performing **specific actions** (like updating or processing data), rather than managing data resources.
+
+#### When NOT to use RPC
+1. **Frontend clients**: RPC is less common for APIs designed for web browsers or mobile apps.
+2. **Data-centric APIs**: For APIs that mainly deal with data (CRUD operations), another API style (like REST) is often a better fit.
+3. **Control over network communication**: If you need fine-grained control over **HTTP headers, cookies**, or other network-level details, RPC may not be suitable.
+
+#### Summary
+- RPC allows a client to call a remote server method just like a local method call.
+- It involves three components: **API definition**, **client stub**, and **server stub**.
+- Benefits include simplicity and local transparency, while drawbacks include performance and reliability issues.
+- RPC is well-suited for backend communication but may not be the best choice for frontend clients or data-centric operations.
+
+
