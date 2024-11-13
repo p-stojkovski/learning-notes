@@ -44,7 +44,7 @@
 **1. What Are Integrations in Datadog?**
    - **Integrations** are one of Datadog's most powerful features, providing an easy way to collect metrics from applications, infrastructure, and cloud services.
    - These integrations enable applications and infrastructure components to consistently send data to Datadog without manual setup.
-
+     
 **2. Sources for Metrics Collection:**
    - **Applications and Code**: Collects data on application performance and any errors, helping with debugging and ensuring the application is functioning as intended.
    - **Infrastructure**: Includes servers, databases, containers, and serverless functions where code is run. This layer provides metrics on how the infrastructure supporting the application is performing.
@@ -57,6 +57,15 @@
 
 **4. Using Integrations in Practice:**
    - By integrating each layer (cloud account, server, application), users get a **comprehensive view** of the entire system.
+
+**Example**: 
+Imagine you have a web application hosted on AWS. To monitor this setup, you start by installing the AWS integration in Datadog. This integration automatically pulls in metrics from your cloud resources—like CPU usage, memory, and network traffic for EC2 instances.
+
+Then, you add an integration for MySQL if your application uses a MySQL database. This integration will send data on query performance, connection status, and database size to Datadog.
+
+Finally, you set up an integration for Docker if your application runs in containers. The Docker integration will collect metrics on container health, resource usage, and restarts.
+
+By combining these integrations, Datadog provides a complete view of your application's performance across the cloud infrastructure, database, and containers, all visible from a single dashboard.
 
 **5. Starting with the AWS Integration:**
    - Installing the AWS integration first allows Datadog to collect high-level cloud metrics.
